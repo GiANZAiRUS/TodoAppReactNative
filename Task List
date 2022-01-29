@@ -1,0 +1,33 @@
+Task List
+
+    Task
+        -Title
+        -Description
+        -Status: Done/Not Yet
+
+    Functions
+        Add Task
+        Update Task
+            Update Task Done (Toggle)
+            Update Task Title (Popup)
+        Delete Task
+        
+            
+
+
+
+
+- Task List
+    - List Tasks
+      - Filter Tasks (done/not done)
+    - Add Task
+    - Update Task
+      - Update Task Done
+      - Update Task Title
+    - Delete Task
+    * Data must be persisted (all tasks, plus data related to each tasks)
+    * Build apk in release mode
+
+
+January 31, 2022 10 AM
+send repo and apk: andrew@aos.com.ph
