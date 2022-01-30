@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import { Button } from '../common';
 import { View, Text, TextInput } from 'react-native'
-import CheckBox from '@react-native-community/checkbox'
+import BouncyCheckbox from 'react-native-bouncy-checkbox';
 import styles from './styles'
 
 const TodoItem = ({ id, todo, complete, edit, onToggle, toggleModal, toggleEdit, onEdit}) => {
@@ -12,9 +12,10 @@ const TodoItem = ({ id, todo, complete, edit, onToggle, toggleModal, toggleEdit,
                 (<TextInput style={styles.txtInput} value={todo} onChangeText={onEdit(id)} />):
                 (
                     <>
-                    <CheckBox
-                        value={complete}
-                        onValueChange={() => onToggle(id)}
+                    <BouncyCheckbox
+                        onPress={() => onToggle(id)}
+                        fillColor='green'
+                        isChecked={complete}
                     />
                     <Text style={[complete?{textDecorationLine: 'line-through', textDecorationStyle: 'solid'} : null, { paddingRight: 30, color: 'black'}]}>
                         {todo}
