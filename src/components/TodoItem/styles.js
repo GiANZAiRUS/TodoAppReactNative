@@ -21,5 +21,10 @@ export default StyleSheet.create({
       flexDirection: 'row',
       justifyContent: 'center',
       alignItems: 'center'
+  },
+  txtInput: {
+      borderBottomWidth: 1,
+      flex: 1,
+      color: 'black'
   }
 }) 

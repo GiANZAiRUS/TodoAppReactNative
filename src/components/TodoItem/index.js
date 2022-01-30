@@ -9,14 +9,14 @@ const TodoItem = ({ id, todo, complete, edit, onToggle, toggleModal, toggleEdit,
         <View style={styles.container}>
             <View style={styles.textContainer}> 
                 {edit ? 
-                (<TextInput style={{ borderBottomWidth: 1, flex: 1 }} value={todo} onChangeText={onEdit(id)} />):
+                (<TextInput style={styles.txtInput} value={todo} onChangeText={onEdit(id)} />):
                 (
                     <>
                     <CheckBox
                         value={complete}
                         onValueChange={() => onToggle(id)}
                     />
-                    <Text style={[complete?{textDecorationLine: 'line-through', textDecorationStyle: 'solid'} : null, { paddingRight: 30}]}>
+                    <Text style={[complete?{textDecorationLine: 'line-through', textDecorationStyle: 'solid'} : null, { paddingRight: 30, color: 'black'}]}>
                         {todo}
                     </Text>
                     </>

@@ -8,7 +8,7 @@ const Button = ({
 }) => {
   return (
     <TouchableOpacity style={[style]} onPress={onPress}>
-      {title && <Text>{title}</Text>}
+      {title && <Text style={{ color: 'black' }}>{title}</Text>}
     </TouchableOpacity>
   )
 }

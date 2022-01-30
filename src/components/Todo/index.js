@@ -24,7 +24,7 @@ const Index = ({
         <>
         <Container>
             <Modal visible={modalVisible} onOkay={onDelete} onCancel={toggleModal}>
-                <Text>Are you sure you want to delete task?</Text>
+                <Text style={{ color: 'black' }}>Are you sure you want to delete task?</Text>
             </Modal>
             <TodoFilter filter={filter} onFilter={onFilter} />
                 {toDos?.length > 0 ?
@@ -35,13 +35,14 @@ const Index = ({
                     )
                     :
                     <View style={styles.center}>
-                        <Text>No Data Available</Text>
+                        <Text style={{ color: 'gray'}}>No Data Available</Text>
                     </View>
                 }
                 <View style={styles.inputContainer}>
                     <TextInput
-                        style={{ flex: 1 }}
+                        style={{ flex: 1, color: 'black' }}
                         placeholder='Add todo'
+                        placeholderTextColor='gray'
                         onChangeText={onChange('add')}
                         value={data?.add}
                     />
